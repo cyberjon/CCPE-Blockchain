@@ -123,6 +123,7 @@ router.get('/trans', function(req, res) {
     var num = req.body.LIMIT_NUM;
     my_cc.query.read([seller,num],function(err,resp){
       console.log(resp);
+      res.send(resp);
     });
 });
 
